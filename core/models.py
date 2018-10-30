@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class person(models.Model):
+class Person(models.Model):
 	name = models.CharField(max_length=100)
 	image = models.CharField(max_length=100)
 	lives_in = models.CharField(max_length=100)

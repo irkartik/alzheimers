@@ -32,6 +32,7 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880
 # Application definition
 
 INSTALLED_APPS = [
+    'core',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
