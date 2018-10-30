@@ -4,7 +4,7 @@ from django.db import models
 
 class Person(models.Model):
 	name = models.CharField(max_length=100)
-	image = models.CharField(max_length=100)
+	image = models.CharField(max_length=100, blank=True, null=True)
 	lives_in = models.CharField(max_length=100)
 	contact = models.CharField(max_length=100)
 	age = models.CharField(max_length=100)
