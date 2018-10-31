@@ -70,7 +70,11 @@ def comparePerson(request):
 	image = InMemoryUploadedFile(buf, "image", filename + ".png", None, buf.tell(), None)
 	
 	image_input = face_recognition.load_image_file(image)
-	encoded_input = face_recognition.face_encodings(image_input)[0]
+	try:
+		encoded_input = face_recognition.face_encodings(image_input)[0]
+	except:
+		print('no face detected')
+		return HttpResponse(json.dumps({'status': 'No Face Detected'}))
 
 	matched = []
 
